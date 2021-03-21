@@ -13,7 +13,7 @@ export class CSVFileReader implements DataReader {
   read() {
     this.data = fs
       .readFileSync(this.filename, {
-        encoding: "utf-8"
+        encoding: "utf-8",
       })
       .split("\n")
       .map((row: string): string[] => {
