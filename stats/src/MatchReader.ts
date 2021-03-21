@@ -1,10 +1,14 @@
-import { DataReader } from "./CSVFileReader";
+import { CSVFileReader, DataReader } from "./CSVFileReader";
 import { MatchData } from "./MatchData";
 import { MatchResult } from "./MatchResult";
 import { dateStringToDate } from "./utils";
 
 export class MatchReader {
   matches: MatchData[] = [];
+
+  static fromCSV(): MatchReader {
+    return new MatchReader(new CSVFileReader("football.csv"));
+  }
 
   constructor(private reader: DataReader) {}
 
