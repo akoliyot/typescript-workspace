@@ -13,3 +13,14 @@ class ArrayOfString {
     return this.collection[index];
   }
 }
+
+class ArrayOfAnything<T> {
+  constructor(public collection: T[]) {}
+
+  get(index: number): T {
+    return this.collection[index];
+  }
+}
+
+new ArrayOfAnything<string>(["s", "t"]);
+new ArrayOfAnything<number>([2, 10]);
