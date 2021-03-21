@@ -44,3 +44,24 @@ function printAnything<T>(arr: T[]): void {
     console.log(arr[i]);
   }
 }
+
+// Generic constraints
+
+class Car {
+  print() {
+    console.log("I am a car");
+  }
+}
+
+class House {
+  print() {
+    console.log("I am a house");
+  }
+}
+
+function printHousesOrCars<T>(arr: T[]): void {
+  for (let i = 0; i < arr.length; i++) {
+    // Property 'print' does not exist on type 'T'.ts(2339)
+    arr[i].print();
+  }
+}
