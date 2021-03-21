@@ -1,2 +1,2 @@
-# typescript-workspace
-Workspace of one or more TypeScript projects for learning.
+# TypeScript Workspace
+Workspace containing one or more TypeScript projects for learning.
