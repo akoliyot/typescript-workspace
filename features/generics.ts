@@ -59,9 +59,12 @@ class House {
   }
 }
 
-function printHousesOrCars<T>(arr: T[]): void {
+interface Printable {
+  print(): void;
+}
+
+function printHousesOrCars<T extends Printable>(arr: T[]): void {
   for (let i = 0; i < arr.length; i++) {
-    // Property 'print' does not exist on type 'T'.ts(2339)
     arr[i].print();
   }
 }
